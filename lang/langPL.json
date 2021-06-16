@@ -1,0 +1,12 @@
+{
+    "lang": "pl",
+    "welcome" : "Witaj",
+    "name" : "Imię",
+    "next" : "Dalej",
+    "emptyInput" : "Proszę o wprowadzenie nazwy użytkownika",
+    "good" : "Poprawne",
+    "bad" : "Złe",
+    "settings" : "Opcje",
+    "time" : "Czas",
+    "save" : "Zapisz"
+}

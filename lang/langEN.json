@@ -1,0 +1,12 @@
+{
+    "lang" : "en",
+    "welcome" : "Welcome",
+    "name" : "Name",
+    "next" : "Next",
+    "emptyInput" : "Please insert a user name",
+    "good" : "Good",
+    "bad" : "Bad",
+    "settings" : "Settings",
+    "time" : "Time",
+    "save" : "Save"
+}

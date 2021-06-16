@@ -1,0 +1,462 @@
+*{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --blue:  rgb(1, 158, 255);
+    --green: rgb(0, 182, 61);
+}
+
+
+html{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+
+body{
+    margin: 0;
+}
+
+
+#headerTitle{
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+#headerTitle::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+.appTitle{
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    position: absolute;
+}
+
+
+.letterOfTitle{
+    font-size: 8vw;
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+}
+
+
+.letterOfTitle:hover{
+    transform: translate(0, -10px);
+    cursor: pointer;
+}
+
+
+#userContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 50px;
+    border: solid lightgrey 1px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 40px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Comfortaa";
+}
+
+
+#userContainer label{
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Comfortaa";
+    padding: 15px;
+}
+
+
+#userContainer input{
+    border-radius: 20px;
+    border: solid grey 1px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Comfortaa";
+    font-weight: bold;
+    font-size: 35px;
+    width: 250px;
+}
+
+
+#userContainer button{
+    position: relative;
+    background-color: var(--blue);
+    border: none;
+    padding: 10px;
+    width: 120px;
+    margin-top: 35px;
+    left: 70%;
+    color: white;
+    font-family: "Comfortaa";
+    font-size: 35px;
+    font-weight: bold;
+    display: block;
+}
+
+
+#userContainer button:hover{
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+
+p.number{
+    background-color: var(--blue);
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
+    text-align: center;
+    font-size: 45px;
+    float: left;
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+
+#userContainer p.operator{
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    float: left;
+    font-family: "Comfortaa";
+    font-weight: bold;
+}
+
+
+#userContainer::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+#inputAlert{
+    max-width: 400px;
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Comfortaa";
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    color: red;
+}
+
+
+#footer{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+
+
+#footer p{
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    font-family: "Comfortaa";
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+#footer p:hover:not(#footer #author){
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+
+#footer::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+#answersContainer{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0px;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 40px 5px rgba(0, 0, 0, 0.2);
+    margin: 0px;
+    padding: 15px;
+}
+
+
+#statsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+
+#statsContainer p{
+    text-align: center;
+    font-family: "Comfortaa";
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 35px;
+}
+
+
+#statsContainer::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+.goodAnswers{
+    color: var(--green);
+}
+
+
+.badAnswers{
+    color: red;
+}
+
+
+#answers{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Comfortaa";
+}
+
+
+#answers p:hover{
+    background-color:  orangered;
+}
+
+
+#animatingBackground{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: lightgreen;
+    width: 100%;
+}
+
+
+#appTitle{
+    float: left;
+    position: absolute;
+    margin: 0;
+    margin-top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+    font-size: 50px;
+}
+
+
+#settingsLabel{
+    float: left; 
+    font-size: 100px;
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+
+#settingsLabel:hover{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+
+
+#welcomeLabel{
+    font-size: 8vw;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+}
+
+
+#settingsContainer{
+    position: fixed;
+    height: 100%;
+    display: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 40px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    text-align: center;
+}
+
+
+#settingsTitle{
+    font-weight: bold; 
+    font-size: 25px;
+}
+
+
+#settingsContainer p{
+    text-align: center;
+    font-family: "Comfortaa";
+    font-size: 35px;
+}
+
+
+#saveSettings{
+    max-width: 150px;
+    padding: 10px;
+    background-color: var(--blue);
+    margin: auto;
+    color: white;
+    font-size: 35px;
+}
+
+
+#saveSettings:hover{
+    background-color: var(--green);
+}
+
+
+#timeInput{
+    -webkit-appearance: none;
+    background-color: lightgrey;
+    width: 80%;
+    height: 25px; 
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+#timeInput::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+}
+
+
+#timeInput::-moz-range-thumb{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 992px),
+       only screen and (max-width: 600px) {
+    #userContainer{
+        padding: 50px;
+    }
+
+    #userContainer label{
+        font-size: 25px;
+        margin-right: 15px;
+    }
+
+    #userContainer input{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    #userContainer button{
+        padding: 10px;
+        width: 80px;
+        font-size: 15px;
+    }
+
+    #userContainer p.operator{
+        font-size: 15px;
+    }
+
+    .letterOfTitle{
+        margin-top: 10px;
+    }
+
+    #footer p{
+        font-size: 15px;
+    }
+
+    #appTitle{
+        margin-top: 22px;
+        font-size: 25px;
+    }
+    
+    #settingsLabel{
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+    }
+
+    p.number{
+        font-size: 20px;
+        width: 70px;
+        height: 70px;
+        margin: 0px;
+    }
+
+    #statsContainer p{
+        font-size: 15px;
+    }
+
+    #settingsContainer p{
+        font-size: 20px;
+    }
+
+    #saveSettings{
+        max-width: 100px;
+    }
+
+    #answersContainer{
+        max-width: 380px;
+    }
+
+    #timeInput{
+        height: 15px;
+    }
+
+    #timeInput::-webkit-slider-thumb{
+        width: 25px;
+        height: 25px;
+    }
+
+    #timeInput::-moz-range-thumb{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media only screen and (min-width: 1024px),
+       only screen and (min-height: 768px) {
+    .letterOfTitle{
+        font-size: 80px;
+    }
+}
